@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>image ivnert</title>
+		<link href="css/style.css" rel="stylesheet">
+	</head>
+	<body>
+		<img id="car" style="width: 500px; height:500px" src="https://i.pinimg.com/736x/4f/58/d8/4f58d8c8e544612132565fce71376ef2.jpg" alt="nissan silvia s15">
+
+
+		<script>
+			const image  = document.getElementById('car');
+			/*function flip()
+			{
+				image.style.transform = 'scaleY(-1)';
+
+			}
+			function notflip()
+			{
+				image.style.transform= 'none';
+			}*/
+
+			function flip()
+			{
+				image.style.filter = 'invert(1)';
+
+			}
+			function notflip()
+			{
+				image.style.filter = 'none';
+			}
+
+			image.addEventListener('mouseover',flip);
+			image.addEventListener('mouseout',notflip);
+
+		</script>
+	</body>
+</html>

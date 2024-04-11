@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>self-modify</title>
+</head>
+
+<body>
+	<h1 id="result" >Modification count: 0</h1>
+
+	<script>
+		let ans = document.getElementById('result');
+		let count = 0;
+		function modify()
+		{
+			count++;
+			ans.innerText = "Modification count: "+ count;
+		}
+		setInterval(modify,1000);
+	</script>
+</body>
+
+</html>

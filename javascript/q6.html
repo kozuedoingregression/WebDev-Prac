@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>BirthDate Day</title>
+		<link href="css/style.css" rel="stylesheet">
+	</head>
+	<body>
+		<label for="BirthDate">Enter Birthdate</label>
+		<input id="bd" type="date">
+		<button onclick="cal()">Click</button>
+		<h4 id="result" ></h4>
+		<script>
+			function cal()
+			{
+				const bdate = document.getElementById('bd').value;
+				const date = new Date(bdate);
+				const days = ["Sunday","Monday", "Tuesday" , "Wednesday", "Thursday", "Friday", "Saturday"];
+				const dayofweek = days[date.getDay()];
+
+				const ans = document.getElementById('result').innerText = dayofweek;
+			}
+		</script>
+
+	</body>
+</html>

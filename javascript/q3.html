@@ -1,0 +1,52 @@
+<!DCOTYPE html>
+<html lang="en">
+<head>
+	<title>Country Names</title>
+</head>
+
+<body>
+	<label for="counrty">Select a counrty</label>
+	<select id="country" >
+		<option value="">-- select country --</option>
+		<option value="USA">USA</option>
+		<option value="India">India</option>
+	</select>
+	
+	<label for="capital">Select a capital</label>
+	<select id="capital">
+		<option value="">-- select capital --</option>
+		<option value="Washington">Washington</option>
+		<option value="Delhi">Delhi</option>
+	</select>
+
+	<button onclick="check()">check</button>
+	<h4 id="result"></h4>
+
+	<script>
+		const correctans = {
+			"USA":"Washington",
+			"India":"Delhi"
+		}
+
+		function check()
+		{
+			const country = document.getElementById('country').value;
+			const capital = document.getElementById('capital').value;
+			let ans = document.getElementById('result');
+
+			if( correctans[country] == capital)
+			{
+				ans.innerText = "correct";
+			}
+			else
+			{
+				ans.innerText = "wrong";
+			}
+
+
+		}
+
+	</script>
+</body>
+
+</html>

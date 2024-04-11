@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>tel number</title>
+		<link href="css/style.css" rel="stylesheet">
+	</head>
+	<body>
+		<label for="telnumebr">Enter Telephone Number:</label>
+		<input type="text" id="tnum" name="" value="">
+			
+		<button onclick="getnum()">click</button>
+		<h4 id="area"></h4>
+		<h4 id="token"></h4>
+		<script>
+			function getnum(){
+				const tnum = document.getElementById('tnum').value.toString();
+				const area = document.getElementById('area');
+				const token = document.getElementById('token');
+				
+
+			
+				area.innerText = "area code: " +tnum.split(")")[0].split("(")[1];
+				token.innerText = "token: "+ tnum.split("-")[1];
+
+			}
+		</script>
+	</body>
+</html>
