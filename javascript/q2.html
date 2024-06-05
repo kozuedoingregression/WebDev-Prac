@@ -1,89 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Form Validation</title>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-  }
-  .container {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  input[type=text], input[type=email], input[type=password] {
-    width: 100%;
-    padding: 10px;
-    margin: 5px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
-  input[type=submit] {
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    width: 100%;
-  }
-  input[type=submit]:hover {
-    background-color: #45a049;
-  }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Validation</title>
 </head>
+
 <body>
 
-<div class="container">
-  <h2>Form Validation</h2>
-  <form action="#" method="post" id="myForm">
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" placeholder="Your name.." required>
+  <div class="container">
+    <h2>Form Validation</h2>
+    <form action="#" method="post" id="myForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" placeholder="Your name.." required>
 
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" placeholder="Your email.." required>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Your email.." required>
 
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="password" placeholder="Your password.." required>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" placeholder="Your password.." required>
 
-    <input type="submit" value="Submit">
-  </form>
-</div>
+      <input type="submit" value="Submit">
+    </form>
+  </div>
 
-<script>
-document.getElementById("myForm").addEventListener("submit", function(event) {
-  var name = document.getElementById("name").value;
-  var email = document.getElementById("email").value;
-  var password = document.getElementById("password").value;
-  var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  var passwordPattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
-  
-  if (name.length < 3) {
-    alert("Name must be at least 3 characters long.");
-    event.preventDefault();
-    return;
-  }
+  <script>
+    document.getElementById("myForm").addEventListener("submit", function (event) {
+      var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+      var password = document.getElementById("password").value;
+      var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      var passwordPattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
 
-  if (!emailPattern.test(email)) {
-    alert("Invalid email address.");
-    event.preventDefault();
-    return;
-  }
+      if (name.length < 3) {
+        alert("Name must be at least 3 characters long.");
+        event.preventDefault();
+        return;
+      }
 
-  if (!passwordPattern.test(password)) {
-    alert("Password must be at least 8 characters long and contain at least one digit, one lowercase letter, and one uppercase letter.");
-    event.preventDefault();
-    return;
-  }
-});
-</script>
+      if (!emailPattern.test(email)) {
+        alert("Invalid email address.");
+        event.preventDefault();
+        return;
+      }
+
+      if (!passwordPattern.test(password)) {
+        alert("Password must be at least 8 characters long and contain at least one digit, one lowercase letter, and one uppercase letter.");
+        event.preventDefault();
+        return;
+      }
+    });
+  </script>
 
 </body>
-</html>
 
+</html>

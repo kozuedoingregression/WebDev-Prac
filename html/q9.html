@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Tags Demonstration</title>
+   
+</head>
+<body>
+    <header>
+        <h1>Welcome to HTML5 Tags Demonstration</h1>
+    </header>
+
+    <nav>
+        <a href="#video">Video</a>
+        <a href="#audio">Audio</a>
+        <a href="#embed">Embed</a>
+        <a href="#article">Article</a>
+    </nav>
+
+    <div class="container">
+        <section class="media" id="video">
+            <h2>Video Example</h2>
+            <video width="600" controls>
+                <source src="movie.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+
+        <section class="media" id="audio">
+            <h2>Audio Example</h2>
+            <audio controls>
+                <source src="audio.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+        </section>
+
+        <section class="media" id="embed">
+            <h2>Embed Example</h2>
+            <embed src="sample.pdf" width="600" height="400" type="application/pdf">
+        </section>
+
+        <section id="article" class="article-content">
+            <h2>Article Example</h2>
+            <article>
+                <h3>Understanding HTML5 Tags</h3>
+                <p>HTML5 introduces many new tags that help structure content in a more meaningful way. Here are a few:</p>
+                <ul>
+                    <li><strong>Video</strong>: Embeds video content.</li>
+                    <li><strong>Audio</strong>: Embeds audio content.</li>
+                    <li><strong>Embed</strong>: Embeds external content, such as PDFs.</li>
+                    <li><strong>Article</strong>: Defines a section of content that forms an independent part of a document or site.</li>
+                </ul>
+            </article>
+        </section>
+
+        <section class="article-content">
+            <h2>Datalist Example</h2>
+            <label for="browsers">Choose your browser from the list:</label>
+            <input list="browsers" id="browser" name="browser">
+            <datalist id="browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Safari">
+                <option value="Edge">
+                <option value="Opera">
+            </datalist>
+        </section>
+
+        <section class="article-content">
+            <h2>BDI Example</h2>
+            <p>In the following text, the part in different language direction will be isolated:</p>
+            <p><bdi>مثال على نص</bdi> is an example of text in Arabic.</p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 HTML5 Tags Demonstration. All rights reserved.</p>
+    </footer>
+</body>
+</html>

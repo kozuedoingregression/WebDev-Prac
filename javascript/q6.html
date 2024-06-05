@@ -18,6 +18,7 @@
 				const date = new Date(bdate);
 				const days = ["Sunday","Monday", "Tuesday" , "Wednesday", "Thursday", "Friday", "Saturday"];
 				const dayofweek = days[date.getDay()];
+				console.log(date.getDay());
 
 				const ans = document.getElementById('result').innerText = dayofweek;
 			}

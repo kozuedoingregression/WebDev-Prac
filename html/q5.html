@@ -1,33 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title></title>
-		<link href="css/style.css" rel="stylesheet">
-	</head>
-	<body>
-		<form>
-			<fieldset>
-				<legend>hh</legend>
-			
-			<label for="">yry</label>
-			<input type="asd" name="" value="">
-			<br>
-			<label for="gender">gender</label>
-			<input type="radio" name="" value="male">male
-			<input type="radio" name="" value="">female
-			<br>
-			<input type="checkbox" name="" value="">ss
-			<br>
-			<input type="color" name="" value="">
-			<input type="reset" name="" value="Reset">
-			<input type="submit" name="" value="Submit">
-						
-			
-			</fieldset>
-	</form>
-	
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Map Example</title>
+    <style>
+        #info {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Image Map Example</h1>
+    <img src="ClickableMapExample.png" alt="Clickable Map Example" usemap="#image-map">
+    
+    <map name="image-map">
+        <area shape="rect" coords="34,44,270,350" alt="Example 1" href="#" onclick="showInfo('Example 1: This is some information about the first example.')">
+        <area shape="circle" coords="500,200,100" alt="Example 2" href="#" onclick="showInfo('Example 2: This is some information about the second example.')">
+        <area shape="poly" coords="340,210,320,210,305,270,350,350,400,320" alt="Example 3" href="#" onclick="showInfo('Example 3: This is some information about the third example.')">
+    </map>
 
-	</body>
+    <div id="info">Click on the hotspots to see more information.</div>
+
+    <script>
+        function showInfo(info) {
+            document.getElementById('info').innerText = info;
+        }
+    </script>
+</body>
 </html>
